@@ -23,6 +23,11 @@ mode="Global">
 	namespace="OurTest1">
 	</codegen>
 	<variables>
+		<var
+		id="e67ceb7c-ee78-4daa-a0aa-60f8359ea52e"
+		name="Name">
+			S{LShiftKey up}ari Fink
+		</var>
 	</variables>
 	<recorditems>
 		<mouseitem
@@ -202,62 +207,6 @@ gD//2Q==
 			</helperscreenshot>
 		</mouseitem>
 		<keysequenceitem
-		KeySequence=""
-		duration="100ms"
-		enabled="True"
-		optional="False"
-		presstime="100ms"
-		searchpropertyid="fa6e9328-641e-4a5f-be50-e25460d4c68c">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="0eeb9c61-da29-44f7-9e9c-2ff665310545"
-			sourcename="Recorder">
-				<element
-				capabilities="accessible"
-				dontcache="False"
-				enabled="True"
-				flavor="msaa"
-				hasfocus="False"
-				index="0"
-				prefcap="text"
-				rect="282,439,174,19"
-				role="text"
-				snapElem=""
-				valid="True"
-				visible="True">
-					<attribute
-					name="text"
-					type="System.String">
-					</attribute>
-					<attribute
-					name="accessiblename"
-					type="System.String">
-						Enter your name
-					</attribute>
-					<attribute
-					name="accessiblerole"
-					type="System.Windows.Forms.AccessibleRole, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-						Text
-					</attribute>
-					<attribute
-					name="accessiblestate"
-					type="System.Windows.Forms.AccessibleStates, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-						Focusable
-					</attribute>
-					<attribute
-					name="accessiblevalue"
-					type="System.String">
-					</attribute>
-				</element>
-				<path>
-					/form[@controlname='RxMainFrame']/?/?/tabpage[@controlname='RxTabIntroduction']/?/?/text[@accessiblename='Enter your name']
-				</path>
-			</info>
-		</keysequenceitem>
-		<keysequenceitem
 		KeySequence="S{LShiftKey up}ari Fink"
 		duration="100ms"
 		enabled="True"
@@ -267,6 +216,10 @@ gD//2Q==
 			<comment>
 			</comment>
 			<bindings>
+				<binding
+				target="KeySequence"
+				variable="Name">
+				</binding>
 			</bindings>
 			<info
 			id="0eeb9c61-da29-44f7-9e9c-2ff665310545"

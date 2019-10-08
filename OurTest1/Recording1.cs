@@ -41,6 +41,7 @@ namespace OurTest1
         /// </summary>
         public Recording1()
         {
+            Name = "S{LShiftKey up}ari Fink";
         }
 
         /// <summary>
@@ -52,6 +53,18 @@ namespace OurTest1
         }
 
 #region Variables
+
+        string _Name;
+
+        /// <summary>
+        /// Gets or sets the value of variable Name.
+        /// </summary>
+        [TestVariable("e67ceb7c-ee78-4daa-a0aa-60f8359ea52e")]
+        public string Name
+        {
+            get { return _Name; }
+            set { _Name = value; }
+        }
 
 #endregion
 
@@ -83,19 +96,15 @@ namespace OurTest1
             repo.RxMainFrame.RxTabIntroduction.EnterYourName.Click("30;5");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence '' with focus on 'RxMainFrame.RxTabIntroduction.EnterYourName'.", repo.RxMainFrame.RxTabIntroduction.EnterYourNameInfo, new RecordItemIndex(1));
-            repo.RxMainFrame.RxTabIntroduction.EnterYourName.PressKeys("");
-            Delay.Milliseconds(100);
-            
-            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence 'S{LShiftKey up}ari Fink' with focus on 'RxMainFrame.RxTabIntroduction.EnterYourName'.", repo.RxMainFrame.RxTabIntroduction.EnterYourNameInfo, new RecordItemIndex(2));
-            repo.RxMainFrame.RxTabIntroduction.EnterYourName.PressKeys("S{LShiftKey up}ari Fink");
+            Report.Log(ReportLevel.Info, "Keyboard", "Key sequence from variable '$Name' with focus on 'RxMainFrame.RxTabIntroduction.EnterYourName'.", repo.RxMainFrame.RxTabIntroduction.EnterYourNameInfo, new RecordItemIndex(1));
+            repo.RxMainFrame.RxTabIntroduction.EnterYourName.PressKeys(Name);
             Delay.Milliseconds(0);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.RxTabIntroduction.BtnSubmitUserName' at 20;11.", repo.RxMainFrame.RxTabIntroduction.BtnSubmitUserNameInfo, new RecordItemIndex(3));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.RxTabIntroduction.BtnSubmitUserName' at 20;11.", repo.RxMainFrame.RxTabIntroduction.BtnSubmitUserNameInfo, new RecordItemIndex(2));
             repo.RxMainFrame.RxTabIntroduction.BtnSubmitUserName.Click("20;11");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Welcome, Sari Fink!') on item 'RxMainFrame.RxTabIntroduction.LblWelcomeMessage'.", repo.RxMainFrame.RxTabIntroduction.LblWelcomeMessageInfo, new RecordItemIndex(4));
+            Report.Log(ReportLevel.Info, "Validation", "Validating AttributeEqual (Text='Welcome, Sari Fink!') on item 'RxMainFrame.RxTabIntroduction.LblWelcomeMessage'.", repo.RxMainFrame.RxTabIntroduction.LblWelcomeMessageInfo, new RecordItemIndex(3));
             Validate.AttributeEqual(repo.RxMainFrame.RxTabIntroduction.LblWelcomeMessageInfo, "Text", "Welcome, Sari Fink!");
             Delay.Milliseconds(100);
             
